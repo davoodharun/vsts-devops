@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+     <script src="lib/VSS.SDK.js"></script>
+</head>
+
+<body>
+        
+    <div id="app"></div>
+    <script type="text/javascript">
+        VSS.init({
+            explicitNotifyLoaded: true,
+            usePlatformScripts: true,
+            usePlatformStyles: true,
+            configureModuleLoader:true
+        });
+        
+        VSS.ready(function () {
+            require(["dist/app"], function (main) {
+                
+             });
+        });
+    </script>
+</body>
+
+</html>

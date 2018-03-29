@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "outDir": "./built/",
+        "sourceMap": true,
+        "strict": true,
+        "experimentalDecorators": true,
+        "strictPropertyInitialization": true,
+        "noImplicitReturns": true,
+        "module": "es2015",
+        "noImplicitThis": true,
+        "moduleResolution": "node",
+        "target": "es5",
+        "types": [
+            "vss-web-extension-sdk"
+          ]
+    },
+    "include": [
+        "./src/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

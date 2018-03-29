@@ -1,0 +1,67 @@
+{
+    "manifestVersion": 1,
+    "id": "selenium-vsts-test-explorer",
+    "version": "1.0.596",
+    "name": "Selenium Testing Explorer",
+    "description": "Samples containing different widgets extending dashboards",
+    "publisher": "Selenium",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "icons": {
+        "default": "src/img/logo.jpg"
+    },
+    "contributions": [
+        {
+            "id": "SeleniumExplorer",
+            "type": "ms.vss-dashboards-web.widget",
+            "includes": ["ms.vss-test-web.test-run", "ms.vss-releaseManagement-web.release-service-data-external" ],
+            "targets": [
+                "ms.vss-dashboards-web.widget-catalog"
+            ],
+            "properties": {
+                "name": "Test Run and Release Explorer",
+                "description": "Explore your releases and the test runs associated with them",
+                "catalogIconUrl:": "src/img/logo.jpg",
+                "previewImageUrl": "src/img/preview.png",
+                "uri": "index.html",
+                "supportedSizes": [
+                     {
+                            "rowSpan": 4,
+                            "columnSpan": 4
+                        }
+                    ],
+                "supportedScopes": ["project_team"]
+            }
+        }
+    ],
+    "files": [
+        {
+            "path": "dist",
+            "addressable": true
+        },
+        {
+            "path": "src/img",
+            "addressable": true
+        },
+        {
+            "path": "index.html",
+            "addressable": true
+        },
+        {
+            "path": "node_modules/vss-web-extension-sdk/lib",
+            "addressable": true,
+            "packagePath": "lib"
+        }
+    ],
+    "scopes":[
+      "vso.work",
+      "vso.release_execute",
+      "vso.release_manage",
+      "vso.test",
+      "vso.test_write",
+      "vso.release"
+    ]
+}
