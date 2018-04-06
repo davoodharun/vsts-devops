@@ -1,8 +1,0 @@
-# Custom Selenium Test Explorer for VSTS Dashboard
-This project is a scaffolidng of several C# Unit Testing projects that can be incorporated into an exisitng project and used to develop a continuous integration and delivery pipiline in VSTS. The testing frameworks utlilized in this project are Selenium and MSTest, although any testing framework can be used depending on your specific use case. 
-## Quickstart
-1. git clone https://github.com/davoodharun/selenium-vsts-ext.git
-2. cd selenium-vsts-ext
-3. npm install
-4. npm run gallery-publish
-5. upload .visx file to VSTS Marketplace
