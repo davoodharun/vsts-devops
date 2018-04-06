@@ -26,7 +26,7 @@
           <div v-show="!showCategory" id="summary">
               Name: <a v-bind:href="testRun.url" target="blank">{{testRun.releaseName}}</a><br />
               Id: {{testRun.releaseId}}<br />
-              <a class="link-with-icon-text" target="_blank" v-bind:href="testRun.downloadLink">Download Report</a><br />
+              <a class="link-with-icon-text" target="_blank" v-bind:href="testRun.downloadLink">Download Report<v-icon class="ml-1">file_download</v-icon></a><br />
               <div class="results">
                   <span class="success--text display-3">{{testRun.passedTests}} </span> <span class="display-2">passed</span><br>
                 <span class="error--text display-3">{{testRun.totalTests - testRun.passedTests}} </span> <span class="display-2">failed</span><br>
@@ -117,7 +117,7 @@ export default class TestResults extends Vue {
   }
   #release-title {
     overflow: hidden;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     height: 60px;
   }
     .test-results {
@@ -205,7 +205,7 @@ export default class TestResults extends Vue {
     .wrapper {
       display: grid;
       overflow: auto;
-      grid-template-columns: 90px 90px 90px;
+      grid-template-columns: 95px 95px 95px;
       grid-gap: 5px;
       margin:auto;
       color: #444;
