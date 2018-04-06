@@ -1,0 +1,333 @@
+{
+    "source": 2,
+    "id": 2,
+    "revision": 133,
+    "name": "Selenium Release Example - Parallelism",
+    "description": null,
+    "createdBy": {
+        "displayName": "Harun Davood",
+        "url": "https://app.vssps.visualstudio.com/A735d22f3-6345-4ea6-80ca-1e8ea2b584b4/_apis/Identities/ef9c76ab-0239-4be7-bb3c-98caff3a6c1d",
+        "_links": {
+            "avatar": {
+                "href": "https://harundavood.visualstudio.com/_api/_common/identityImage?id=ef9c76ab-0239-4be7-bb3c-98caff3a6c1d"
+            }
+        },
+        "id": "ef9c76ab-0239-4be7-bb3c-98caff3a6c1d",
+        "uniqueName": "Harun.Davood@appliedis.com",
+        "imageUrl": "https://harundavood.visualstudio.com/_api/_common/identityImage?id=ef9c76ab-0239-4be7-bb3c-98caff3a6c1d",
+        "descriptor": "aad.YjczMDVmNGItYjY1YS03ZTJiLThlYjEtODA0MTZiYTQ4MDkz"
+    },
+    "createdOn": "2018-02-28T16:58:04.473Z",
+    "modifiedBy": {
+        "displayName": "Harun Davood",
+        "url": "https://app.vssps.visualstudio.com/A735d22f3-6345-4ea6-80ca-1e8ea2b584b4/_apis/Identities/ef9c76ab-0239-4be7-bb3c-98caff3a6c1d",
+        "_links": {
+            "avatar": {
+                "href": "https://harundavood.visualstudio.com/_api/_common/identityImage?id=ef9c76ab-0239-4be7-bb3c-98caff3a6c1d"
+            }
+        },
+        "id": "ef9c76ab-0239-4be7-bb3c-98caff3a6c1d",
+        "uniqueName": "Harun.Davood@appliedis.com",
+        "imageUrl": "https://harundavood.visualstudio.com/_api/_common/identityImage?id=ef9c76ab-0239-4be7-bb3c-98caff3a6c1d",
+        "descriptor": "aad.YjczMDVmNGItYjY1YS03ZTJiLThlYjEtODA0MTZiYTQ4MDkz"
+    },
+    "modifiedOn": "2018-04-06T04:13:00.020Z",
+    "isDeleted": false,
+    "path": "\\",
+    "variables": {
+        "AlternateLoginTestDataPath": {
+            "value": "Cases/AlternateLogin/CheckAlternateLoginTestData.csv"
+        },
+        "BasicLoginTestDataPath": {
+            "value": "Cases/BasicLogin/CheckBasicLoginTestData.csv"
+        },
+        "ContainerName": {
+            "value": "\"selenium\""
+        },
+        "SourceFolder": {
+            "value": "\"C:\\ReleaseAgent\\TestResults\""
+        },
+        "StorageAccountName": {
+            "value": "\"exelonselenium\""
+        },
+        "StorageKey": {
+            "value": null,
+            "isSecret": true
+        },
+        "SubscriptionName": {
+            "value": "\"Visual Studio Enterprise\""
+        },
+        "TestResults": {
+            "value": "\"C:\\ReleaseAgent\\TestResults\""
+        }
+    },
+    "variableGroups": [],
+    "environments": [
+        {
+            "id": 2,
+            "name": "Environment 1",
+            "rank": 1,
+            "owner": {
+                "displayName": "Harun Davood",
+                "url": "https://app.vssps.visualstudio.com/A735d22f3-6345-4ea6-80ca-1e8ea2b584b4/_apis/Identities/ef9c76ab-0239-4be7-bb3c-98caff3a6c1d",
+                "_links": {
+                    "avatar": {
+                        "href": "https://harundavood.visualstudio.com/_api/_common/identityImage?id=ef9c76ab-0239-4be7-bb3c-98caff3a6c1d"
+                    }
+                },
+                "id": "ef9c76ab-0239-4be7-bb3c-98caff3a6c1d",
+                "uniqueName": "Harun.Davood@appliedis.com",
+                "imageUrl": "https://harundavood.visualstudio.com/_api/_common/identityImage?id=ef9c76ab-0239-4be7-bb3c-98caff3a6c1d",
+                "descriptor": "aad.YjczMDVmNGItYjY1YS03ZTJiLThlYjEtODA0MTZiYTQ4MDkz"
+            },
+            "variables": {},
+            "variableGroups": [],
+            "preDeployApprovals": {
+                "approvals": [
+                    {
+                        "rank": 1,
+                        "isAutomated": true,
+                        "isNotificationOn": false,
+                        "id": 4
+                    }
+                ],
+                "approvalOptions": {
+                    "requiredApproverCount": null,
+                    "releaseCreatorCanBeApprover": false,
+                    "autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped": false,
+                    "enforceIdentityRevalidation": false,
+                    "timeoutInMinutes": 0,
+                    "executionOrder": 1
+                }
+            },
+            "deployStep": {
+                "id": 5
+            },
+            "postDeployApprovals": {
+                "approvals": [
+                    {
+                        "rank": 1,
+                        "isAutomated": true,
+                        "isNotificationOn": false,
+                        "id": 6
+                    }
+                ],
+                "approvalOptions": {
+                    "requiredApproverCount": null,
+                    "releaseCreatorCanBeApprover": false,
+                    "autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped": false,
+                    "enforceIdentityRevalidation": false,
+                    "timeoutInMinutes": 0,
+                    "executionOrder": 2
+                }
+            },
+            "deployPhases": [
+                {
+                    "deploymentInput": {
+                        "parallelExecution": {
+                            "parallelExecutionType": "none"
+                        },
+                        "skipArtifactsDownload": false,
+                        "artifactsDownloadInput": {
+                            "downloadInputs": [
+                                {
+                                    "artifactItems": [],
+                                    "alias": "SeleniumExample-ASP.NET-CI-Parallelism",
+                                    "artifactType": "Build",
+                                    "artifactDownloadMode": "All"
+                                }
+                            ]
+                        },
+                        "queueId": 15,
+                        "demands": [],
+                        "enableAccessToken": false,
+                        "timeoutInMinutes": 0,
+                        "jobCancelTimeoutInMinutes": 1,
+                        "condition": "succeeded()",
+                        "overrideInputs": {}
+                    },
+                    "rank": 1,
+                    "phaseType": 1,
+                    "name": "Agent phase",
+                    "workflowTasks": [
+                        {
+                            "taskId": "ef087383-ee5e-42c7-9a53-ab56c98420f9",
+                            "version": "2.*",
+                            "name": "Test",
+                            "refName": "",
+                            "enabled": true,
+                            "alwaysRun": false,
+                            "continueOnError": true,
+                            "timeoutInMinutes": 240,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "testSelector": "testAssemblies",
+                                "testAssemblyVer2": "SeleniumExample-ASP.NET-CI-Parallelism/drop/Account/bin/Release/Account.dll\nSeleniumExample-ASP.NET-CI-Parallelism/drop/Login/bin/Release/Login.dll\nSeleniumExample-ASP.NET-CI-Parallelism/drop/Outage/bin/Release/Outage.dll\nSeleniumExample-ASP.NET-CI-Parallelism/drop/Payment/bin/Release/Payment.dll",
+                                "testPlan": "",
+                                "testSuite": "",
+                                "testConfiguration": "",
+                                "tcmTestRun": "$(test.RunId)",
+                                "searchFolder": "$(System.DefaultWorkingDirectory)",
+                                "testFiltercriteria": "",
+                                "runOnlyImpactedTests": "False",
+                                "runAllTestsAfterXBuilds": "50",
+                                "uiTests": "false",
+                                "vstestLocationMethod": "version",
+                                "vsTestVersion": "latest",
+                                "vstestLocation": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow\\vstest.console.exe",
+                                "runSettingsFile": "$(System.DefaultWorkingDirectory)/SeleniumExample-ASP.NET-CI-Parallelism/drop/Selenium.runsettings",
+                                "overrideTestrunParameters": "-AlternateLoginTestDataPath $(AlternateLoginTestDataPath) -BasicLoginTestDataPath $(BasicLoginTestDataPath)",
+                                "pathtoCustomTestAdapters": "",
+                                "runInParallel": "true",
+                                "runTestsInIsolation": "False",
+                                "codeCoverageEnabled": "true",
+                                "otherConsoleOptions": "",
+                                "distributionBatchType": "basedOnTestCases",
+                                "batchingBasedOnAgentsOption": "autoBatchSize",
+                                "customBatchSizeValue": "10",
+                                "batchingBasedOnExecutionTimeOption": "autoBatchSize",
+                                "customRunTimePerBatchValue": "60",
+                                "dontDistribute": "False",
+                                "testRunTitle": "$(Release.ReleaseName)",
+                                "platform": "",
+                                "configuration": "",
+                                "publishRunAttachments": "true",
+                                "rerunFailedTests": "False",
+                                "rerunType": "basedOnTestFailurePercentage",
+                                "rerunFailedThreshold": "30",
+                                "rerunFailedTestCasesMaxLimit": "5",
+                                "rerunMaxAttempts": "3"
+                            }
+                        },
+                        {
+                            "taskId": "e213ff0f-5d5c-4791-802d-52ea3e7be1f1",
+                            "version": "1.*",
+                            "name": "Upload to Azure Blob",
+                            "refName": "",
+                            "enabled": true,
+                            "alwaysRun": false,
+                            "continueOnError": false,
+                            "timeoutInMinutes": 0,
+                            "definitionType": "task",
+                            "overrideInputs": {},
+                            "condition": "succeeded()",
+                            "inputs": {
+                                "scriptType": "filePath",
+                                "scriptName": "$(System.DefaultWorkingDirectory)/SeleniumExample-ASP.NET-CI-Parallelism/drop/uploadDirectoryToAzureBlob.ps1",
+                                "arguments": " -SubscriptionName $(SubscriptionName) -StorageName $(StorageAccountName) -ContainerName $(ContainerName) -DestFolderName \"$(Release.ReleaseName)_$(Release.ReleaseId)\" -Source $(SourceFolder) -StorageKey $(StorageKey) -DefaultWorkingDirectory $(System.DefaultWorkingDirectory) -BuildDefinitionName $(Build.DefinitionName) -releaseName $(Release.ReleaseName) -releaseId $(Release.ReleaseId) -ResultsFolder $(TestResults)",
+                                "workingFolder": "",
+                                "inlineScript": "",
+                                "failOnStandardError": "true"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "environmentOptions": {
+                "emailNotificationType": "OnlyOnFailure",
+                "emailRecipients": "release.environment.owner;release.creator",
+                "skipArtifactsDownload": false,
+                "timeoutInMinutes": 0,
+                "enableAccessToken": false,
+                "publishDeploymentStatus": true,
+                "badgeEnabled": false,
+                "autoLinkWorkItems": true
+            },
+            "demands": [],
+            "conditions": [
+                {
+                    "name": "ReleaseStarted",
+                    "conditionType": 1,
+                    "value": ""
+                }
+            ],
+            "executionPolicy": {
+                "concurrencyCount": 1,
+                "queueDepthCount": 0
+            },
+            "schedules": [],
+            "retentionPolicy": {
+                "daysToKeep": 30,
+                "releasesToKeep": 3,
+                "retainBuild": true
+            },
+            "processParameters": {},
+            "properties": {},
+            "preDeploymentGates": {
+                "id": 0,
+                "gatesOptions": null,
+                "gates": []
+            },
+            "postDeploymentGates": {
+                "id": 0,
+                "gatesOptions": null,
+                "gates": []
+            },
+            "badgeUrl": "https://harundavood.vsrm.visualstudio.com/_apis/public/Release/badge/a27adcb0-2788-4e21-8afb-f31159727430/2/2"
+        }
+    ],
+    "artifacts": [
+        {
+            "sourceId": "a27adcb0-2788-4e21-8afb-f31159727430:5",
+            "type": "Build",
+            "alias": "SeleniumExample-ASP.NET-CI-Parallelism",
+            "definitionReference": {
+                "artifactSourceDefinitionUrl": {
+                    "id": "https://harundavood.visualstudio.com/_permalink/_build/index?collectionId=f03fe02b-18d2-449a-80f5-61877fcfb66e&projectId=a27adcb0-2788-4e21-8afb-f31159727430&definitionId=5",
+                    "name": ""
+                },
+                "defaultVersionBranch": {
+                    "id": "",
+                    "name": ""
+                },
+                "defaultVersionSpecific": {
+                    "id": "",
+                    "name": ""
+                },
+                "defaultVersionTags": {
+                    "id": "",
+                    "name": ""
+                },
+                "defaultVersionType": {
+                    "id": "latestType",
+                    "name": "Latest"
+                },
+                "definition": {
+                    "id": "5",
+                    "name": "SeleniumExample-ASP.NET-CI-Parallelism"
+                },
+                "project": {
+                    "id": "a27adcb0-2788-4e21-8afb-f31159727430",
+                    "name": "SeleniumExample"
+                }
+            },
+            "isPrimary": true
+        }
+    ],
+    "triggers": [
+        {
+            "artifactAlias": "SeleniumExample-ASP.NET-CI-Parallelism",
+            "triggerConditions": [],
+            "triggerType": 1
+        }
+    ],
+    "releaseNameFormat": "Release-$(rev:r)",
+    "url": "https://harundavood.vsrm.visualstudio.com/a27adcb0-2788-4e21-8afb-f31159727430/_apis/Release/definitions/2",
+    "_links": {
+        "self": {
+            "href": "https://harundavood.vsrm.visualstudio.com/a27adcb0-2788-4e21-8afb-f31159727430/_apis/Release/definitions/2"
+        },
+        "web": {
+            "href": "https://harundavood.visualstudio.com/a27adcb0-2788-4e21-8afb-f31159727430/_release?definitionId=2"
+        }
+    },
+    "tags": [],
+    "properties": {
+        "DefinitionCreationSource": {
+            "$type": "System.String",
+            "$value": "ReleaseClone"
+        }
+    }
+}
