@@ -1,7 +1,7 @@
 {
     "manifestVersion": 1,
     "id": "selenium-vsts-test-explorer",
-    "version": "1.0.596",
+    "version": "1.0.1064",
     "name": "Selenium Testing Explorer",
     "description": "Samples containing different widgets extending dashboards",
     "publisher": "Selenium",
@@ -19,7 +19,8 @@
             "type": "ms.vss-dashboards-web.widget",
             "includes": ["ms.vss-test-web.test-run", "ms.vss-releaseManagement-web.release-service-data-external" ],
             "targets": [
-                "ms.vss-dashboards-web.widget-catalog"
+                "ms.vss-dashboards-web.widget-catalog",
+                ".SeleniumExplorer.Configuration"
             ],
             "properties": {
                 "name": "Test Run and Release Explorer",
@@ -29,13 +30,23 @@
                 "uri": "index.html",
                 "supportedSizes": [
                      {
-                            "rowSpan": 4,
+                            "rowSpan": 3,
                             "columnSpan": 4
                         }
                     ],
                 "supportedScopes": ["project_team"]
             }
-        }
+        },
+        {
+             "id": "SeleniumExplorer.Configuration",
+             "type": "ms.vss-dashboards-web.widget-configuration",
+             "targets": [ "ms.vss-dashboards-web.widget-configuration" ],
+             "properties": {
+                 "name": "HelloWorldWidget Configuration",
+                 "description": "Configures HelloWorldWidget",
+                 "uri": "configuration.html"
+             }
+         }
     ],
     "files": [
         {
@@ -48,6 +59,10 @@
         },
         {
             "path": "index.html",
+            "addressable": true
+        },
+        {
+            "path": "configuration.html",
             "addressable": true
         },
         {

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+    <html xmlns="http://www.w3.org/1999/xhtml">
+        <head>                          
+            <script src="lib/VSS.SDK.min.js"></script>      
+            <script type="text/javascript">
+                VSS.init({                        
+                    explicitNotifyLoaded: true,
+                    usePlatformStyles: true
+                });
+
+                VSS.require("TFS/Dashboards/WidgetHelpers", function (WidgetHelpers) {
+                    VSS.register("SeleniumExplorer.Configuration", function () {   
+                        var $storageAccountInput = $("#storageAccountUrl");
+
+                        return {
+                            load: function (widgetSettings, widgetConfigurationContext) {
+                                var settings = JSON.parse(widgetSettings.customSettings.data);
+                                if (settings && settings.storageAccountUrl) {
+                                     $storageAccountInput.val(settings.storageAccountUrl);
+                                 }
+                                 $storageAccountInput.on("change", function () {
+                                     var customSettings = {data: JSON.stringify({storageAccountUrl: $storageAccountInput.val()})};
+                                     var eventName = WidgetHelpers.WidgetEvent.ConfigurationChange;
+                                     var eventArgs = WidgetHelpers.WidgetEvent.Args(customSettings);
+                                     widgetConfigurationContext.notify(eventName, eventArgs);
+                                 });
+
+                                return WidgetHelpers.WidgetStatusHelper.Success();
+                            },
+                            onSave: function() {
+                                var customSettings = {data: JSON.stringify({storageAccountUrl: $storageAccountInput.val()})};
+                                return WidgetHelpers.WidgetConfigurationSave.Valid(customSettings); 
+                            }
+                        }
+                    });
+                    VSS.notifyLoadSucceeded();
+                });
+            </script>       
+        </head>
+        <body>
+            <div class="container">
+                <fieldset>
+                    <label class="label">Azure storage blob url: </label>
+                    <input size="60" id="storageAccountUrl" style="margin-top:10px">
+                    <label>Make sure to include the container name followed by a trailing '/'. <br> 
+                        Ex. https://exelonselenium.blob.core.windows.net/selenium/ </label>                    
+                    </input>
+                </fieldset>     
+            </div>
+        </body>
+    </html>

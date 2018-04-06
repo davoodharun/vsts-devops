@@ -11,7 +11,7 @@ module.exports = {
 		libraryTarget: "amd"
 	},
 	externals: [
-		/^VSS\/.*/, /^TFS\/.*/, /^q$/
+		/^VSS\/.*/, /^TFS\/.*/, /^q$/, /^Charts\/.*/
 	],
 	resolve: {
 		extensions: ["*", ".webpack.js", ".web.js", ".ts", ".tsx", ".js"],
@@ -32,6 +32,10 @@ module.exports = {
           }
           // other vue-loader options go here
         }
+      },
+      {
+        test: /\.css$/,
+        use: [ 'style-loader', 'css-loader' ]
       },
       {
         test: /\.tsx?$/,

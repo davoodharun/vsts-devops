@@ -1,0 +1,4 @@
+﻿SitePrefix,Url,Title,User,Password
+bge,https://t-e-euweb-bge-ui-01.azurewebsites.net/,Login | Baltimore Gas and Electric Company,7539860000@example.com,Password1
+peco,https://t-e-euweb-peco-ui-01.azurewebsites.net/,Login | PECO - An Exelon Company,User_3335519039@test.com,Password1
+comed,https://t-e-euweb-comed-ui-03.azurewebsites.net/,Login | ComEd - An Exelon Company,User_6256299033@test.com,Password1

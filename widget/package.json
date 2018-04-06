@@ -9,11 +9,11 @@
   "scripts": {
     "build": "npm run clean && npm run webpack",
     "clean": "rimraf ./dist && rimraf ./*.vsix",
-    "gallery-publish": "npm run build && tfx extension publish --rev-version --token mi244imrtmzyhxtiych23wf2e6titzfffbdhm25my5p3bob6el4q",
+    "gallery-publish": "npm run build && tfx extension create --manifest-globs vss-extension.json --rev-version",
     "lint": "tslint -c tslint.json 'src/*.ts'",
     "package": "tfx extension create  --rev-version",
     "postbuilddemo": "npm run package",
-    "webpack": "webpack --progress --colors --config webpack.config.js --output-path ./dist -p",
+    "webpack": "webpack --progress --colors --config webpack.config.js --output-path ./dist",
     "compiletests": "tsc ./tests/CountdownCalculatorSpec.ts",
     "runtests": "jasmine-node --test-dir ./tests --verbose --junitreport --output ./reportTests/",
     "runcovertests": "istanbul cover --hook-run-in-context --report cobertura --report html node_modules/jasmine-node/bin/jasmine-node --test-dir ./tests --verbose --junitreport --output ./reportTests/",
@@ -32,6 +32,9 @@
     "istanbul": "^0.4.5",
     "jasmine-node": "^1.14.5",
     "rimraf": "^2.6.1",
+    "style-loader": "^0.20.3",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
     "tfx-cli": "^0.4.16",
     "ts-loader": "^3.5.0",
     "typescript": "^2.7.2",
@@ -41,6 +44,7 @@
     "vue-property-decorator": "^6.0.0",
     "vue-tables-2": "^1.4.0",
     "vue-template-compiler": "^2.5.16",
+    "vuetable-2": "^1.7.5",
     "webpack": "^2.7.0"
   },
   "dependencies": {
@@ -48,6 +52,7 @@
     "@types/jquery": "^2.0.34",
     "@types/q": "0.0.32",
     "applicationinsights-js": "^1.0.9",
+    "chart.js": "^2.7.2",
     "jasmine": "^2.4.1",
     "jquery": "^3.1.0",
     "moment": "^2.14.1",
@@ -55,7 +60,10 @@
     "requirejs": "^2.2.0",
     "spectrum-colorpicker": "^1.8.0",
     "telemetryclient-team-services-extension": "*",
-    "vss-web-extension-sdk": "^2.116.1",
-    "vue-table-component": "^1.9.1"
+    "vss-web-extension-sdk": "^2.117.0",
+    "vue-chartjs": "^3.3.1",
+    "vue-moment": "^3.2.0",
+    "vue-table-component": "^1.9.1",
+    "vuetify": "^1.0.12"
   }
 }
