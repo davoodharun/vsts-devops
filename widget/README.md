@@ -6,7 +6,11 @@ A sample VSTS extension widget is also included in this project that gathers rep
 VSTS release and build definitions are also given within this repository.
 
 
-![Solution Architecture](https://raw.githubusercontent.com/davoodharun/vsts-devops/master/docs/img/solutionarchitecture.png)
+![Release List](https://raw.githubusercontent.com/davoodharun/vsts-devops/master/docs/img/ReleaseList.png)
+
+![Test Run / Release Summary](https://raw.githubusercontent.com/davoodharun/vsts-devops/master/docs/img/summary.png)
+
+![Test Data](https://raw.githubusercontent.com/davoodharun/vsts-devops/master/docs/img/testdata.png)
 
 ## Widget Quickstart
 1. git clone https://github.com/davoodharun/vsts-devops.git
