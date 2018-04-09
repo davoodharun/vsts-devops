@@ -37,8 +37,8 @@ The process described in this document is meant to be implemented into an existi
 
 1. [Prerequisites](#prerequisites)
 2. [Solution Architecture](docs/pages/SolutionArchitecture.md)
-2. [Visual Studio Selenium Project]()
-3. [VSTS Configuration]()
+2. [Visual Studio Selenium Project](testing-solution/README.md)
+3. [VSTS Configuration](vsts-definitions/README.md)
 
 ## Background
 

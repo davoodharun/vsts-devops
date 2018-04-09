@@ -28,7 +28,7 @@ Visual Studio Team Services is where your code repository will be managed, track
 
 ![Release Cycle](https://raw.githubusercontent.com/davoodharun/vsts-devops/master/docs/img/ReleaseCycle.png)
 
-Once your solution is built, VSTS can be configured to kick off a Release cycle defined by a definition that contains steps to run your Selenium testing scripts on a release agent (server) and upload any artifacts to Azure Blob storage. 
+Once your solution is built, VSTS can be configured to kick off a Release cycle, or in other words,a series of steps to run your Selenium testing scripts on a release agent (server) and upload any artifacts to Azure Blob storage. These artificats are then made available for download and analysis through a VSTS Dashboard widget.
 
 To run the steps defined by the release definition, VSTS allocates a virtual machine (agent) to do the required work. VSTS has the ability to use hosted or private release agents. Hosted agents are preconfigured release agents that are managed and patched by VSTS. Private release agents are ones that you must allocated and manage yourself but can be customized to fit the needs of your project. Since the process described in this document only requires Visual Studio 2017 to run automated Selenium scripts, we will use a Hosted agent that comes with a preconfigured installation of VS2017. 
 
