@@ -35,7 +35,7 @@ This document describes how to implement and run automated Selenium testing scri
 
 The process described in this document is meant to be implemented into an existing Visual Studio solution by adding several isolated Visual Studio Projects that contain several Selenium test scripts. The resulting solution is built using Visual Studio Team Services Build Definitions and Tasks which subsequently kicks off a series of VSTS Release Tasks to run your Selenium scripts and upload any testing reports and artifacts to an Azure Storage Blob. The artifacts, reports, and results that are stored in this blob are made available to users through the use of a VSTS Dashboard Widget for easy access. 
 
-1. [Prerequisites](##Prerequisites)
+1. [Prerequisites](#Prerequisites)
 2. [Solution Architecture](docs/pages/SolutionArchitecture.md)
 2. [Visual Studio Selenium Project]()
 3. [VSTS Configuration]()
