@@ -14,8 +14,8 @@ This section describes the series of Visual Studio Unit Testing projects that ar
     CheckAccountLookupTestData.csv
     ```
 
-**Each test data file should contain data headers on the first row and data values for each test run on subsequent rows**
-
+    **Each test data file should contain data headers on the first row and data values for each test run on subsequent rows**
+    
     - Each Unit Testing project contains a Start.cs file that orchestrates the runs for each individual test case. Start.cs reads the test data and create a list of sites, or test runs, to run each test case against – each test case can run against multiple sets of test parameters (depending on what is in its respective test data file). The Start.cs file should contain several test methods, any helper functions to initiate and tear down your Selenium web drivers. This project uses a new instance of a Selenium Web driver for each test case, so each test case can be run in parallel to speed up test execution.
 
 - 1 Class library for helper functions (Read CSV)
