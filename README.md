@@ -63,16 +63,22 @@ Visual Studio Team Services (VSTS) is a cloud service for collaborating on code 
 - In addition, the VSTS ecosystem provides support for adding extensions, integrating with other popular services, such as: Campfire, Slack, Trello, UserVoice, and more, and developing your own custom extensions.
 - VSTS allows for quick setup, maintenance-free operations, easy collaboration across domains, elastic scale, and rock-solid security. You'll also have access to cloud load testing, cloud build servers, and application insights.
 
+![VSTS](https://raw.githubusercontent.com/davoodharun/vsts-devops/master/docs/img/vsts_logo.png)
+
 * You will need an existing VSTS account with at least one repository that can be used for automated Selenium testing integration (preferably a web application)
 
 ### SELENIUM
 Selenium is an automated testing framework specifically geared to the needs of testing of web applications of all types. Selenium operations are highly flexible, allowing many options for locating UI elements and comparing expected test results against actual application behavior. One of Selenium’s key features is the support for executing one’s tests on multiple browser platforms.
+
+![Selenium](https://raw.githubusercontent.com/davoodharun/vsts-devops/master/docs/img/selenium.png)
 
 * Although this repository uses Selenium and MSTest as the unit testing frameworks, any suitable framework can be used. 
 
 ### AZURE BLOB STORAGE ACCOUNT
 
 Azure Blob storage is a cloud service provided by Microsoft for storing large amounts of unstructured object data, such as text or binary data, that can be accessed from anywhere in the world via HTTP or HTTPS. You can use Blob storage to expose data publicly to the world, or to store application data privately.
+
+![Azure Storage](https://raw.githubusercontent.com/davoodharun/vsts-devops/master/docs/img/Azure-Storage.png)
 
 Common uses of Blob storage include:
 - Serving images or documents directly to a browser
