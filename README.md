@@ -43,9 +43,16 @@ The process described in this document is meant to be implemented into an existi
 ## Background
 
 ## Prerequisites
+
 ### MICROSOFT VISUAL STUDIO
+
 Microsoft Visual Studio is an integrated development environment (IDE) from Microsoft. It is used to develop computer programs, as well as web sites, web apps, web services and mobile apps. Visual Studio uses Microsoft software development platforms such as Windows API, Windows Forms, Windows Presentation Foundation, Windows Store and Microsoft Silverlight. It can produce both native code and managed code.
+
+![VisualStudio](https://raw.githubusercontent.com/davoodharun/vsts-devops/master/docs/img/visual_studio.png)
+
+
 ### VISUAL STUDIO TEAM SERVICES (VSTS)
+
 Visual Studio Team Services (VSTS) is a cloud service for collaborating on code development. It provides an integrated set of features that you access through your web browser or IDE client, including:
 - Git repositories for source control of your code
 - uild and release management to support continuous integration and delivery of your apps
@@ -56,9 +63,14 @@ Visual Studio Team Services (VSTS) is a cloud service for collaborating on code 
 - In addition, the VSTS ecosystem provides support for adding extensions, integrating with other popular services, such as: Campfire, Slack, Trello, UserVoice, and more, and developing your own custom extensions.
 - VSTS allows for quick setup, maintenance-free operations, easy collaboration across domains, elastic scale, and rock-solid security. You'll also have access to cloud load testing, cloud build servers, and application insights.
 
+* You will need an existing VSTS account with at least one repository that can be used for automated Selenium testing integration (preferably a web application)
+
 ### SELENIUM
 Selenium is an automated testing framework specifically geared to the needs of testing of web applications of all types. Selenium operations are highly flexible, allowing many options for locating UI elements and comparing expected test results against actual application behavior. One of Selenium’s key features is the support for executing one’s tests on multiple browser platforms.
-### AZURE BLOB STORAGE
+
+* Although this repository uses Selenium and MSTest as the unit testing frameworks, any suitable framework can be used. 
+
+### AZURE BLOB STORAGE ACCOUNT
 
 Azure Blob storage is a cloud service provided by Microsoft for storing large amounts of unstructured object data, such as text or binary data, that can be accessed from anywhere in the world via HTTP or HTTPS. You can use Blob storage to expose data publicly to the world, or to store application data privately.
 
@@ -69,3 +81,7 @@ Common uses of Blob storage include:
 - Storing data for backup and restore, disaster recovery, and archiving
 - Storing data for analysis by an on-premises or Azure-hosted service
 Azure Blob storage will ONLY be used to store various testing artifacts and reports output by the Selenium testing framework to be viewed on a VSTS Dashboard.
+
+* You will need at least one Azure storage account with at least 1 container to store any automated testing artifacts. When creating this storage account, please remeber your Azure subscription information, as well as the name of your storage account and access key. You can substitute Azure storage for another file storage system, as long as you are able to upload artificats from VSTS with release tasks within the release cycle system. 
+
+
