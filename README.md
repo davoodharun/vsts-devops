@@ -1,5 +1,5 @@
 # Continuous Integration and Delivery Pipeline with VSTS and Selenium
-This project contains several artifacts that can be utilized to automated browser testing in a continuous integration and delivery pipiline within VSTS. This project includes:
+This project contains several artifacts that can be utilized to run automated browser testing in a continuous integration and delivery pipiline within VSTS. This project includes:
 
 - 1 Sample VSTS dashboard widget extension
     - Widget can be added to a VSTS project dashboard and used to display automated test results. Users can also download and view test data and test run information
@@ -63,22 +63,19 @@ Visual Studio Team Services (VSTS) is a cloud service for collaborating on code 
 - In addition, the VSTS ecosystem provides support for adding extensions, integrating with other popular services, such as: Campfire, Slack, Trello, UserVoice, and more, and developing your own custom extensions.
 - VSTS allows for quick setup, maintenance-free operations, easy collaboration across domains, elastic scale, and rock-solid security. You'll also have access to cloud load testing, cloud build servers, and application insights.
 
-![VSTS](https://raw.githubusercontent.com/davoodharun/vsts-devops/master/docs/img/vsts_logo.png)
 
-* You will need an existing VSTS account with at least one repository that can be used for automated Selenium testing integration (preferably a web application)
+**You will need an existing VSTS account with at least one repository that can be used for automated Selenium testing integration (preferably a web application)**
 
 ### SELENIUM
 Selenium is an automated testing framework specifically geared to the needs of testing of web applications of all types. Selenium operations are highly flexible, allowing many options for locating UI elements and comparing expected test results against actual application behavior. One of Selenium’s key features is the support for executing one’s tests on multiple browser platforms.
 
 ![Selenium](https://raw.githubusercontent.com/davoodharun/vsts-devops/master/docs/img/selenium.png)
 
-* Although this repository uses Selenium and MSTest as the unit testing frameworks, any suitable framework can be used. 
+**Although this repository uses Selenium and MSTest as the unit testing frameworks, any suitable framework can be used.** 
 
 ### AZURE BLOB STORAGE ACCOUNT
 
 Azure Blob storage is a cloud service provided by Microsoft for storing large amounts of unstructured object data, such as text or binary data, that can be accessed from anywhere in the world via HTTP or HTTPS. You can use Blob storage to expose data publicly to the world, or to store application data privately.
-
-![Azure Storage](https://raw.githubusercontent.com/davoodharun/vsts-devops/master/docs/img/Azure-Storage.png)
 
 Common uses of Blob storage include:
 - Serving images or documents directly to a browser
@@ -88,6 +85,6 @@ Common uses of Blob storage include:
 - Storing data for analysis by an on-premises or Azure-hosted service
 Azure Blob storage will ONLY be used to store various testing artifacts and reports output by the Selenium testing framework to be viewed on a VSTS Dashboard.
 
-* You will need at least one Azure storage account with at least 1 container to store any automated testing artifacts. When creating this storage account, please remeber your Azure subscription information, as well as the name of your storage account and access key. You can substitute Azure storage for another file storage system, as long as you are able to upload artificats from VSTS with release tasks within the release cycle system. 
+**You will need at least one Azure storage account with at least 1 container to store any automated testing artifacts. When creating this storage account, please remeber your Azure subscription information, as well as the name of your storage account and access key. You can substitute Azure storage for another file storage system, as long as you are able to upload artificats from VSTS with release tasks within the release cycle system.**
 
 
