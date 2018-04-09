@@ -30,6 +30,12 @@ The testing frameworks utlilized in this project are Selenium and MSTest, althou
 
 ![Solution Architecture](https://raw.githubusercontent.com/davoodharun/vsts-devops/master/docs/img/solutionarchitecture.png)
 
+## Documentation
+1. [Background]()
+2. [Prerequisites]()
+3. [Visual Studio Selenium Project]()
+4. [VSTS Configuration]()
+
 ## Background
 This document describes how to implement and run automated Selenium testing scripts as a part of a continuous delivery and integration pipeline using Build and Release tasks within Visual Studio Team Service (VSTS).
 
@@ -61,5 +67,4 @@ Common uses of Blob storage include:
 - Streaming video and audio
 - Storing data for backup and restore, disaster recovery, and archiving
 - Storing data for analysis by an on-premises or Azure-hosted service
-
 Azure Blob storage will ONLY be used to store various testing artifacts and reports output by the Selenium testing framework to be viewed on a VSTS Dashboard.
