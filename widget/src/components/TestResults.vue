@@ -42,7 +42,9 @@
             </v-btn></span></h2>
               Click tests below to download test data:<br><br>
               <span class="test-data" v-for="test in selectedCategory.cases">
-              <a v-bind:href="test.url">{{test.title}}</a> <span class="passed" v-show="test.outcome === 'Passed'"><i class="material-icons">&#xE876;</i></span><span class="failure" v-show="test.outcome != 'Passed'"><i class="material-icons">&#xE5CD;</i></span><br />
+              <span v-bind:class="{ passed: test.outcome === 'Passed', failure: test.outcome != 'Passed' }"> {{test.title}} </span> 
+              <a v-bind:href="test.url"><v-icon class="ml-1">&#xE85D;</v-icon></a>
+              <span v-show="test.outcome != 'Passed'"><a v-bind:href="test.url.replace('TestData.csv', '.png')"><v-icon class="ml-1">&#xE410;</v-icon></a></span><br />
               </span>
           </div>
         </div>
@@ -127,7 +129,8 @@ export default class TestResults extends Vue {
       color: #1a237e;
     }
     .test-data {
-      font-size: 16px;
+      font-size: 15px;
+      vertical-align: middle;
     }
     .sub-header {
       font-weight: bold;
