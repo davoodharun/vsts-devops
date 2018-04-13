@@ -35,7 +35,6 @@ export default class ReleaseList extends Vue {
       for (var i = 0; i < query.length; i++) {
         TestManagementClient.getClient().getTestRunById(this.projectId, query[i].id).then((result: any) => {
           if(result.release) {
-            console.log(result)
             var folderName = result.release.name + "_" + result.release.id;
             var url = this.storageAccountUrl + folderName + "/" + folderName + ".html";
             var run = {

@@ -4,6 +4,7 @@
         "sourceMap": true,
         "strict": true,
         "experimentalDecorators": true,
+        "allowJs": true,
         "strictPropertyInitialization": true,
         "noImplicitReturns": true,
         "module": "es2015",
@@ -15,7 +16,7 @@
           ]
     },
     "include": [
-        "./src/**/*",
+        "./src"
     ],
     "exclude": [
         "node_modules"

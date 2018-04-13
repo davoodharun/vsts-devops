@@ -10,7 +10,7 @@
         <v-card id="release-title" dark d-flex color="primary">
           <v-layout row wrap  align-center>
             <v-flex class="text-xs-left" xs6>
-              <v-card-text class="title">Release Overview  </v-card-text>
+              <v-card-text class="title"><a v-bind:href="testRun.url" target="blank">{{testRun.releaseName}}</a> </v-card-text>
             </v-flex>
             <v-flex xs6>
               <v-card-text d-flex class="text-xs-right"v-on:click="closeTestResults()">
@@ -24,7 +24,6 @@
       <v-flex width="220px" d-flex xs6 color="white">
         <div height="200px" width="220px" >
           <div v-show="!showCategory" id="summary">
-              Name: <a v-bind:href="testRun.url" target="blank">{{testRun.releaseName}}</a><br />
               Id: {{testRun.releaseId}}<br />
               <a class="link-with-icon-text" target="_blank" v-bind:href="testRun.downloadLink">Download Report<v-icon class="ml-1">file_download</v-icon></a><br />
               <div class="results">
@@ -40,7 +39,7 @@
               >
             back <v-icon class="ml-1">arrow_forward</v-icon>
             </v-btn></span></h2>
-              Click tests below to download test data:<br><br>
+              Click the download button to get test data used for each test. For a failed test, click the image icon to download Selenium screenshots.<br><br>
               <span class="test-data" v-for="test in selectedCategory.cases">
               <span v-bind:class="{ passed: test.outcome === 'Passed', failure: test.outcome != 'Passed' }"> {{test.title}} </span> 
               <a v-bind:href="test.url"><v-icon class="ml-1">&#xE85D;</v-icon></a>
