@@ -8,12 +8,10 @@
     class="elevation-1"
     >
     <template slot="items" slot-scope="{item}">
-        <tr @click="selectRelease(item, $event)">
-            <td>{{item.releaseName }}</td>
-            <td class="text-xs-center">{{item.releaseId }}</td>
-            <td class="text-xs-center">{{item.passedTests }}</td>
-            <td class="text-xs-center">{{item.totalTests }}</td>
-            <td class="text-xs-center">{{item.completedDate | moment }}</td>
+        <tr @click="selectBuild(item, $event)">
+            <td>{{item.automation_build.name }}</td>
+            <td class="text-xs-left">{{item.automation_build.hashed_id }}</td>
+            <td class="text-xs-left">{{item.automation_build.status }}</td>
         </tr>
     </template>
   </v-data-table>
@@ -37,9 +35,7 @@ export default class Grid extends Vue {
     headers = [
         { text: "Name", value: "releaseName", align: 'left', width: "100px"},
         { text: "Id", value: "releaseId", sortable: true, width: "60px" },
-        { text: "Passed", value: "passedTests", width: "70px" },
-        { text: "Total", value: "totalTests", width: "60px" },
-        { text: "Completed", value: "completedDate", sortable: true, align: 'left', width: "150px" }
+        { text: "Status", value: "passedTests", width: "70px" }
     ]
     constructor() {
         super();
@@ -74,9 +70,9 @@ export default class Grid extends Vue {
     onItemChange (val: any, oldVal: any) {
         this.items = val;
     }
-    selectRelease(release: any, event: any) {
-        console.log(release, event)
-        this.$emit('selectRelease', release);
+    selectBuild(release: any, event: any) {
+        console.log(release, 'grid')
+        this.$emit('selectBuild', release);
     }
 } 
 </script>
@@ -85,5 +81,12 @@ export default class Grid extends Vue {
 .greeting {
     font-size: 20px;
     margin-bottom: 5px;
+}
+.menu {
+     min-width: 50px;
+}
+
+tr {
+    cursor: pointer;
 }
 </style>

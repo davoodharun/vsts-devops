@@ -7,6 +7,7 @@ import Vuetify from 'vuetify';
 import 'vuetify/dist/vuetify.min.css' // Ensure you are using css-loader
 const moment = require('moment'); 
 require('moment/locale/es');
+import VueResource from 'vue-resource'
 
 VSS.require([
     "VSS/Controls",
@@ -37,20 +38,21 @@ VSS.require([
 
             Vue.use(require('vue-moment'), {
                 moment
-            })
+            });
 
             new Vue({
                 el: '#app',
-                template: '<App v-bind:storageAccountUrl="storageAccountUrl"/>',
+                template: '<App/>',
                 components: {
                     App
                 },
                 data () {
                     return {
-                        storageAccountUrl: settings.storageAccountUrl
                     }
                 }
             });
+
+            
 
             //var releaseListComponent = new ReleaseListComponent ();
 

@@ -1,10 +1,10 @@
 {
     "manifestVersion": 1,
     "id": "selenium-vsts-test-explorer",
-    "version": "1.0.1086",
+    "version": "1.0.1237",
     "name": "Selenium Testing Explorer",
     "description": "Samples containing different widgets extending dashboards",
-    "publisher": "Selenium",
+    "publisher": "AIS",
     "targets": [
         {
             "id": "Microsoft.VisualStudio.Services"
@@ -13,6 +13,9 @@
     "icons": {
         "default": "src/img/logo.jpg"
     },
+    "categories": [
+        "Test"
+    ],
     "contributions": [
         {
             "id": "SeleniumExplorer",
@@ -28,13 +31,29 @@
                 "catalogIconUrl:": "src/img/logo.jpg",
                 "previewImageUrl": "src/img/preview.png",
                 "uri": "index.html",
+                "supportedScopes": ["project_team"],
                 "supportedSizes": [
-                     {
-                            "rowSpan": 3,
-                            "columnSpan": 4
-                        }
-                    ],
-                "supportedScopes": ["project_team"]
+                    {
+                      "rowSpan": 1,
+                      "columnSpan": 2
+                    },
+                    {
+                      "rowSpan": 2,
+                      "columnSpan": 2
+                    },
+                    {
+                      "rowSpan": 3,
+                      "columnSpan": 5
+                    },
+                    {
+                      "rowSpan": 4,
+                      "columnSpan": 5
+                    },
+                    {
+                        "rowSpan": 4,
+                        "columnSpan": 6
+                      }
+                  ]
             }
         },
         {
