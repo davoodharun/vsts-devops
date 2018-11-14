@@ -1,7 +1,7 @@
 {
     "manifestVersion": 1,
     "id": "selenium-vsts-test-explorer",
-    "version": "1.0.1237",
+    "version": "1.0.1278",
     "name": "Selenium Testing Explorer",
     "description": "Samples containing different widgets extending dashboards",
     "publisher": "AIS",

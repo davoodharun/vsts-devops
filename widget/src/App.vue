@@ -10,7 +10,6 @@
       </div>
       <div class="header-sub">
         <span class="small"><span class="small" v-show="releases.length <= 0">Please select an automation  build to view its results</span><a target="blank" v-bind:href="'https://automate.browserstack.com/builds/' + build_id">{{build_name}}</a></span>
-
       </div>
     </div>
       <v-content>
@@ -48,7 +47,7 @@ export default class App extends Vue {
     this.build_id = '';
   }
   onReleaseSelect(value: any){
-    console.log(value, 'app')
+    console.log(value, 'handler');
     this.releases = value;
     this.build_name = value[0].automation_session.build_name;
     this.build_id = value[0].build_id;

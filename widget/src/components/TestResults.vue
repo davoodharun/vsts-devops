@@ -2,12 +2,12 @@
 <template>
   <v-data-table 
     :headers="headers"
-    :items="tests" 
+    :items="tests"
     class="elevation-1"
     >
     <template slot="items" slot-scope="{item}">
         <tr  @click="getResults(item, $event)">
-            <td>{{item.automation_session.name }}</td>
+            <td><a target="blank" v-bind:href=item.automation_session.browser_url>{{item.automation_session.name }}</a></td>
             <td class="text-xs-left">{{item.automation_session.status}}</td>
             <td class="text-xs-left">{{item.automation_session.browser}} {{item.automation_session.browser_version}}</td>
             <td class="text-xs-left">{{item.automation_session.os}} {{item.automation_session.os_version }}</td>

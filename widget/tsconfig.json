@@ -8,6 +8,7 @@
         "strictPropertyInitialization": true,
         "noImplicitReturns": true,
         "module": "es2015",
+        "noImplicitAny": false,
         "noImplicitThis": true,
         "moduleResolution": "node",
         "target": "es5",
